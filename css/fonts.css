@@ -1,39 +1,15 @@
 @font-face {
-    font-family: 'Open Sans';
+    font-family: 'Lato';
+    font-weight: 100;
+    src: local('Lato Hairline'),
+         local('Lato-Hairline'),
+         url('../fonts/Lato/Lato-Hairline.ttf');
+}
+
+@font-face {
+    font-family: 'Muli';
     font-weight: 300;
-    src: local('Open Sans Light'),
-         local('OpenSans-Light'),
-         url('../fonts/OpenSans-Light.ttf');
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-weight: 400;
-    src: local('Open Sans'),
-         local('OpenSans-Regular'),
-         url('../fonts/OpenSans-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-weight: 600;
-    src: local('Open Sans Semibold'),
-         local('OpenSans-Semibold'),
-         url('../fonts/OpenSans-Semibold.ttf');
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-weight: 700;
-    src: local('Open Sans Bold'),
-         local('OpenSans-Bold'),
-         url('../fonts/OpenSans-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-weight: 800;
-    src: local('Open Sans ExtraBold'),
-         local('OpenSans-ExtraBold'),
-         url('../fonts/OpenSans-ExtraBold.ttf');
+    src: local('Muli'),
+         local('Muli-Light'),
+         url('../fonts/Muli/Muli-Light.ttf');
 }

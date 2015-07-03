@@ -1,6 +1,6 @@
-/*___________________________________________________________________________________________
+/*_______________________________________________________________________________________________
   CSS Reset
-  ___________________________________________________________________________________________*/
+  _______________________________________________________________________________________________*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -51,9 +51,9 @@ table {
 	border-spacing: 0;
 }
 
-/*___________________________________________________________________________________________
+/*_______________________________________________________________________________________________
   General Styles
-  ___________________________________________________________________________________________*/
+  _______________________________________________________________________________________________*/
 
 *,
 *:before,
@@ -63,30 +63,193 @@ table {
 
 html, body {
     height: 100%;
-    font: 400 16px/22px 'Open Sans', Helvetica, sans-serif;
-    font-smoothing: antialiased;
+}
+body {
+    font: 100 30px/45px 'Lato', Helvetica, sans-serif;
+}
+@media all and (max-width: 700px) {
+    body {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+@media all and (max-width: 550px) {
+    body {
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
 
-/*___________________________________________________________________________________________
-  Home Page
-  ___________________________________________________________________________________________*/
+p {
+    margin-bottom: 1em;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+
+/*_______________________________________________________________________________________________
+  Pages
+  _______________________________________________________________________________________________*/
+
+.outer-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: opacity 500ms ease-in-out;
+    overflow: auto;
+}
+.outer-page-hidden {
+    z-index: 0;
+    opacity: 0;
+}
 
 .page {
-    display: flex;
     height: 100%;
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-align-items: center;
+    align-items: center;
 }
 
+/*_______________________________________________________________________________________________
+  Home Page
+  _______________________________________________________________________________________________*/
+
 .logo {
-    margin: auto;
+    width: 25vh;
+}
+
+.go-button {
+    font-size: 3vh;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 10vh;
+    visibility: hidden;
+    opacity: 0;
+    color: white;
+    background-color: #d24d57;
+    cursor: pointer;
+    transition: opacity 500ms ease-in-out;
+}
+.go-button:active {
+    background-color: #f62459;
+}
+.go-button-visible {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 500ms;
+}
+
+/*_______________________________________________________________________________________________
+  Navigation
+  _______________________________________________________________________________________________*/
+
+.nav-page {
+    height: auto;
+    min-height: 100%;
+    font-size: 0.8em;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    padding: 1em 0;
+    color: white;
+    background-color: #d24d57;
+}
+
+.nav-item {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 1em 3em;
+    cursor: pointer;
+}
+.nav-item:active {
+    background-color: #f62459;
+}
+
+.joke-number {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    line-height: 3em;
+    color: #d24d57;
+}
+
+.joke-title {
+    margin-left: 2em;
+}
+
+/*_______________________________________________________________________________________________
+  Joke Page
+  _______________________________________________________________________________________________*/
+
+.joke-page {
+    height: auto;
+    min-height: 100%;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    color: white;
+    background-color: #d24d57;
+}
+
+.joke-info {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 2em;
+    background-color: white;
+    color: #d24d57;
+}
+.joke-number-2 {
+    font-size: 10em;
+    line-height: 1em;
+    cursor: pointer;
+}
+.joke-title-2 {
+    text-transform: uppercase;
+    margin-bottom: 1.2em;
     text-align: center;
 }
 
-.logo div:first-child {
-    font-size: 5em;
+.joke-content {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    font-family: 'Muli';
     font-weight: 300;
 }
-.logo div:nth-child(2) {
-    font-size: 1.5em;
-    transform: translateX(-0.17em);
+
+.done-button {
+    padding: 0.5em 0;
+    margin-top: auto;
+    font-size: 0.7em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #d24d57;
+    background-color: white;
+    cursor: pointer;
 }
-.logo div { line-height: 1em; }
+.done-button:active {
+    background-color: #eee;
+}
