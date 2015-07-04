@@ -7,6 +7,14 @@
 }
 
 @font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    src: local('Lato Light'),
+         local('Lato-Light'),
+         url('../fonts/Lato/Lato-Light.ttf');
+}
+
+@font-face {
     font-family: 'Muli';
     font-weight: 300;
     src: local('Muli'),
