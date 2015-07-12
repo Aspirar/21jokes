@@ -19,4 +19,7 @@
     
     <icon src="icon.png" />
     
+    <gap:splash src="splash.png" />
+    <gap:splash src="splash.jpg" gap:platform="winphone" />
+    
 </widget>
