@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.radian.21jokes"
+        versionCode = "1"
+        version     = "1.1.0" >
+    
+    <name>21 Jokes</name>
+    
+    <description>
+        A list of 21 hilarious jokes that are guaranteed to make you laugh!
+    </description>
+    
+    <gap:platform name="android" />
+    <gap:platform name="winphone" />
+    
+    <preference name="fullscreen" value="true" />
+    
+    <icon src="icon.png" />
+    
+</widget>
